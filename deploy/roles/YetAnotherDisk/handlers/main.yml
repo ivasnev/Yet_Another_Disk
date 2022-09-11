@@ -1,0 +1,6 @@
+---
+
+- name: restart YetAnotherDisk
+  service:
+      name: docker-compose@YetAnotherDisk
+      state: restarted
