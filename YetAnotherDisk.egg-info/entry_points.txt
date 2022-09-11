@@ -1,0 +1,4 @@
+[console_scripts]
+YetAnotherDisk-api = YetAnotherDisk.api.__main__:main
+YetAnotherDisk-db = YetAnotherDisk.db.__main__:main
+
