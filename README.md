@@ -16,23 +16,23 @@
 
     docker run -it \
         -e YETANOTHERDISK_PG_URL=postgresql://user:hackme@localhost/YetAnotherDisk \
-        ivasnev/Yet_Another_Disk YetAnotherDisk-db upgrade head
+        ivasnev/yet_another_disk YetAnotherDisk-db upgrade head
 
 Как запустить REST API сервис локально на порту 80:
 
 .. code-block:: shell
 
-    sudo docker run -it -p 80:80 \
+    sudo docker run -it -p 80:8081 \
         -e YETANOTHERDISK_PG_URL=postgresql://user:hackme@localhost/YetAnotherDisk \
-        ivasnev/Yet_Another_Disk
+        ivasnev/yet_another_disk
 
 Все доступные опции запуска любой команды можно получить с помощью
 аргумента :shell:`--help`:
 
 .. code-block:: shell
 
-    docker run ivasnev/Yet_Another_Disk YetAnotherDisk-db --help
-    docker run ivasnev/Yet_Another_Disk YetAnotherDisk-api --help
+    docker run ivasnev/yet_another_disk YetAnotherDisk-db --help
+    docker run ivasnev/yet_another_disk YetAnotherDisk-api --help
 
 Опции для запуска можно указывать как аргументами командной строки, так и
 переменными окружения с префиксом :shell:`YETANOTHERDISK` (например: вместо аргумента
@@ -75,7 +75,7 @@ deploy/hosts.ini (с установленной Ubuntu) и выполните к
     YetAnotherDisk-db upgrade head
     YetAnotherDisk-api
 
-После запуска команд приложение начнет слушать запросы на 0.0.0.0:80.
+После запуска команд приложение начнет слушать запросы на 0.0.0.0:8081.
 Для отладки в PyCharm необходимо запустить :shell:`env/bin/YetAnotherDisk-api`.
 
 

@@ -1,4 +1,4 @@
-PROJECT_NAME ?= YetAnotherDisk
+PROJECT_NAME ?= yet_another_disk
 VERSION = $(shell python3 setup.py --version | tr '+' '-')
 PROJECT_NAMESPACE ?= ivasnev
 REGISTRY_IMAGE ?= $(PROJECT_NAMESPACE)/$(PROJECT_NAME)
