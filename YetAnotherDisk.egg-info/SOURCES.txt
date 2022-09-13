@@ -1,6 +1,10 @@
+MANIFEST.in
 README.md
+requirements.dev.txt
+requirements.txt
 setup.py
 YetAnotherDisk/__init__.py
+YetAnotherDisk/alembic.ini
 YetAnotherDisk/unit_test.py
 YetAnotherDisk.egg-info/PKG-INFO
 YetAnotherDisk.egg-info/SOURCES.txt
