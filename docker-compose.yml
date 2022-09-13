@@ -18,7 +18,7 @@ services:
 
   YetAnotherDisk:
     restart: always
-    image: ivasnev/yet_another_disk:0.0.1
+    image: ivasnev/yet_another_disk:0.0.2
     command: bash -c "YetAnotherDisk-db upgrade head && YetAnotherDisk-api"
     network_mode: "host"
     environment:

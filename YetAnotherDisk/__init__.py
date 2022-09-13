@@ -5,7 +5,7 @@ __author__ = 'Vasnev Ilya'
 __maintainer__ = __author__
 __email__ = 'ivasnev2002@gmai.com'
 __license__ = 'MIT'
-__version__ = '0.0.1'
+__version__ = '0.0.2'
 
 
 __all__ = (
