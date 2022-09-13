@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  postgres:
+    image: postgres:12
+    restart: always
+    environment:
+      POSTGRES_USER: "user"
+      POSTGRES_PASSWORD: "hackme"
+      POSTGRES_DB: "YetAnotherDisk"
+      PGDATA: "/var/lib/postgresql/data/pgdata"
+    volumes:
+      - ../2. Init Database:/docker-entrypoint-initdb.d
+      - .:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+
+
+  YetAnotherDisk:
+    restart: always
+    image: ivasnev/yet_another_disk:0.0.1
+    command: bash -c "YetAnotherDisk-db upgrade head && YetAnotherDisk-api"
+    network_mode: "host"
+    environment:
+      YetAnotherDisk_PG_URL: postgresql://user:hackme@localhost:5432/YetAnotherDisk
+

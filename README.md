@@ -22,7 +22,7 @@
 
 .. code-block:: shell
 
-    sudo docker run -it -p 80:8081 \
+    sudo docker run -it -p 80:80 \
         -e YETANOTHERDISK_PG_URL=postgresql://user:hackme@localhost/YetAnotherDisk \
         ivasnev/yet_another_disk
 

@@ -1,0 +1,4 @@
+sudo docker logs yet_another_disk_YetAnotherDisk_1
+sudo docker-compose up -d
+sudo docker logs yet_another_disk_YetAnotherDisk_1
+sudo docker cp /home/ubuntu/Yet_Another_Disk/YetAnotherDisk 921bd373ead3:/usr/share/python3/app/lib/python3.8/site-packages/

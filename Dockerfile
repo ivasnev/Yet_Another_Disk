@@ -6,6 +6,8 @@ FROM snakepacker/python:all as builder
 # Создаем виртуальное окружение и обновляем pip
 RUN python3.8 -m venv /usr/share/python3/app
 RUN /usr/share/python3/app/bin/pip install -U pip
+COPY YetAnotherDisk /usr/share/python3/app/lib/python3.8/site-packages/
+
 
 # Устанавливаем зависимости отдельно чтобы закешировать, при последующей сборке
 # Docker пропустит этот шаг если requirements.txt не изменится
