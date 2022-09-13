@@ -24,6 +24,8 @@ FROM snakepacker/python:3.8 as api
 # Копируем в него готовое виртуальное окружение из контейнера builder
 COPY --from=builder /usr/share/python3/app /usr/share/python3/app
 
+COPY YetAnotherDisk /usr/share/python3/app/lib/python3.8/site-packages/YetAnotherDisk/
+
 # Устанавливаем ссылки, чтобы можно было воспользоваться командами
 # приложения
 RUN ln -snf /usr/share/python3/app/bin/YetAnotherDisk-* /usr/local/bin/

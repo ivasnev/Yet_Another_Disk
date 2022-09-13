@@ -43,5 +43,4 @@ docker: sdist
 upload: docker
 	docker tag $(PROJECT_NAME):$(VERSION) $(REGISTRY_IMAGE):$(VERSION)
 	docker tag $(PROJECT_NAME):$(VERSION) $(REGISTRY_IMAGE):latest
-	docker push $(REGISTRY_IMAGE):$(VERSION)
-	docker push $(REGISTRY_IMAGE):latest
+

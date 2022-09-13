@@ -14,15 +14,15 @@
 
 .. code-block:: shell
 
-    docker run -it \
-        -e YETANOTHERDISK_PG_URL=postgresql://user:hackme@localhost/YetAnotherDisk \
-        ivasnev/yet_another_disk YetAnotherDisk-db upgrade head
+    sudo docker run -it -p 80:80 --net=host  \
+    -e YETANOTHERDISK_PG_URL=postgresql://user:hackme@localhost/YetAnotherDisk \
+    ivasnev/yet_another_disk
 
 Как запустить REST API сервис локально на порту 80:
 
 .. code-block:: shell
 
-    sudo docker run -it -p 80:8081 \
+    sudo docker run -it -p 80:80 \
         -e YETANOTHERDISK_PG_URL=postgresql://user:hackme@localhost/YetAnotherDisk \
         ivasnev/yet_another_disk
 
